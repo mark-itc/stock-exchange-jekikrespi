@@ -1,9 +1,6 @@
 let urlQueryString = window.location.search;
 let companySymbol = new URLSearchParams(urlQueryString).get("symbol");
 
-// console.log(companySymbol);
-// console.log(urlQueryString);
-
 async function getApi(url) {
   try {
     loader.style.display = "block";
@@ -19,7 +16,7 @@ async function companyProfile() {
     "https://stock-exchange-dot-full-stack-course-services.ew.r.appspot.com/api/v3/company/profile/" +
       companySymbol
   );
-  //   console.log(result);
+  console.log(result);
   let companyName = result.profile.companyName;
   let companyImage = result.profile.image;
   let companyDescription = result.profile.description;

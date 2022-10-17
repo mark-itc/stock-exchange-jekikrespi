@@ -25,15 +25,28 @@ async function searchCompany() {
 async function searchResult(apiResult) {
   let getResultList = document.getElementById("getResultList");
   let template = document.getElementById("template");
+
   getResultList.innerHTML = "";
-  apiResult.forEach((element) => {
+  apiResult.forEach(async (element) => {
     let cloneTemplate = template.content.cloneNode(true);
     cloneTemplate.querySelector("h6").innerHTML =
       element.name + " (" + element.symbol + ")";
     cloneTemplate
       .querySelector("a")
       .setAttribute("href", "/company.html?symbol=" + element.symbol);
+    let result = await getApi(
+      "https://stock-exchange-dot-full-stack-course-services.ew.r.appspot.com/api/v3/company/profile/" +
+        element.symbol
+    );
+    let companyChanges = result.profile.changesPercentage;
+    let companyImage = result.profile.image;
+    cloneTemplate.querySelector("img").setAttribute("src", companyImage);
+    cloneTemplate.querySelector("p").innerHTML = companyChanges;
+
     getResultList.appendChild(cloneTemplate);
+
+    // console.log(companyImage);
+    // console.log(companyChanges);
   });
 }
 
