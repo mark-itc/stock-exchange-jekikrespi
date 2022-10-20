@@ -14,7 +14,7 @@
       crossorigin="anonymous" />
   </head>
   <body>
-    <div class="marquee" id = marqueeText> 
+    <div class="Marquee" id = marqueeText> 
     </div>
     <div class="container search-container bg-light">
       <h1 class="text-center">Search Nasdaq Stock</h1>
@@ -44,6 +44,11 @@
     </div>
     <script src="./js/scipt.js"></script>
     <script src="./js/marquee.js"></script>
-
+    <script>
+    (async function () {
+      const marquee = new Marquee(document.getElementById('marqueeText'));
+      marquee.load();
+     })()
+    </script>
   </body>
 </html>
