@@ -26,7 +26,7 @@
   height: 100%;
   width: 0;
   background: rgb(144, 199, 238);
-  animation: 6s progress ease-in infinite;
+  animation: 20s progress ease-in infinite;
 }
 
 @keyframes progress {
@@ -42,7 +42,7 @@
   border-radius: 20px;
   line-height: 30px;
   text-align: center;
-  background: lightgray;
+  background: rgb(242, 242, 237);
   border-radius: 20px;
   animation: animate 7s linear infinite;
 }
@@ -50,4 +50,17 @@
   100% {
     transform: translate(-100%, 0);
   }
+}
+
+.highlightText {
+  background-color: yellow;
+}
+
+.imageCompany {
+  height: 30px;
+  width: 30px;
+}
+
+.company-div {
+  margin: 10px;
 }
