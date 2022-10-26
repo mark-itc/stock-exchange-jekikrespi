@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Company Profile</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div id="container">
+      <span class="loader" id="loader"></span>
+      <div class="card">
+        <div class="row g-0">
+          <div class="col-md-4 align-self-center">
+            <img
+              src=""
+              id="cardImage"
+              class="companyImage"
+              alt="Company Image"
+            />
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title" id="companyName"></h5>
+              <p class="card-text" id="companyDescription"></p>
+              <p class="card-subtext" id="companyDetials"></p>
+              <p class="subtext" id="companyChanges"></p>
+              <small class="text-muted" id="companyLink"></small>
+              <div>
+                <canvas id="myChart" width="400" height="400"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="./js/company.js"></script>
+  </body>
+</html>
